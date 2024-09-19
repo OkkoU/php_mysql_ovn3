@@ -1,0 +1,283 @@
+/* === CSS Reset === */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* === MY CODE === */
+:root {
+  --bg-color: #487777;
+  --container-color: #2f4f4f;
+}
+
+* {
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #d4d4d4;
+}
+
+html {
+  background-color: #487777;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+#sort-btns {
+  background-color: #487777;
+  margin-top: 10px;
+}
+
+#dd-btns {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#ca-btns {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#add-btn,
+#dd-asc,
+#dd-desc,
+#ca-asc,
+#ca-desc {
+  background-color: transparent;
+  border: 2px solid var(--container-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 220px;
+  margin: 5px;
+}
+
+#add-btn:hover,
+#dd-asc:hover,
+#dd-desc:hover,
+#ca-asc:hover,
+#ca-desc:hover {
+  background-color: var(--container-color);
+}
+
+table {
+  margin-top: 20px;
+  width: 60%;
+}
+
+tr {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+td:first-child,
+td:last-child {
+  border-radius: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+tr,
+td,
+form {
+  background-color: var(--container-color);
+}
+
+#list-title {
+  font-weight: bold;
+}
+
+.pending-btn {
+  background-color: #dd9426;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.pending-btn:hover {
+  background-color: #be8023;
+}
+
+.completed-btn {
+  background-color: #61bb61;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.completed-btn:hover {
+  background-color: #59ad59;
+}
+
+#edit-btn {
+  background-color: #1cadda;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#edit-btn:hover {
+  background-color: #1791b6;
+}
+
+#dlt-btn {
+  background-color: #ec4747;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#dlt-btn:hover {
+  background-color: #bb3838;
+}
+
+#dlt-form {
+  display: inline;
+}
+
+#add-todo-form,
+#edit-todo-form {
+  display: grid;
+  justify-items: start;
+  background-color: transparent;
+}
+
+#add-btn-form,
+#edit-btn-form {
+  background-color: transparent;
+  border: 2px solid var(--container-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#add-btn-form:hover,
+#edit-btn-form:hover {
+  background-color: var(--container-color);
+}
+
+#title,
+#due-date {
+  color: #000000;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#title-label,
+#due-date-label,
+#description-label {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  table {
+    width: 100%;
+  }
+}
